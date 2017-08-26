@@ -30,7 +30,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 ADD https://github.com/wangchunming/2017hosts/raw/master/hosts-pc /tmp/
-RUN mv /tmp/hosts-pc /etc/
+RUN mv /tmp/hosts-pc /etc/hosts
 
 # tini for subreap                                   
 ENV TINI_VERSION v0.9.0
