@@ -29,6 +29,8 @@ RUN apt-get update \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
 
+ADD https://github.com/wangchunming/2017hosts/raw/master/hosts-pc /tmp/
+RUN mv /tmp/hosts-pc /etc/
 
 # tini for subreap                                   
 ENV TINI_VERSION v0.9.0
